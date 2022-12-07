@@ -8,7 +8,7 @@ import vcover3 from "../assets/video/vcover3.png";
 import { heroapi } from "../data/data";
 const Hero = () => {
   return (
-    <main className="bg-theme w-[100vw] h-auto flex-col items-center content-center">
+    <main className="bg-theme w-[100vw] h-[auto] flex-col items-center content-center pt-8">
       <div className="hero-details flex flex-col item-center justify-center text-center p-8">
         <h1 className="text-white/90 py-1  font-bold text-4xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl">
           {heroapi.title}
