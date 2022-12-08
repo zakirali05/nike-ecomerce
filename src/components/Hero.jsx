@@ -1,10 +1,10 @@
 import React from "react";
 import heroimg from "../assets/hero.png";
-
-import clip from "../assets/video/clip.mp4";
-import vcover1 from "../assets/video/vcover1.png";
-import vcover2 from "../assets/video/vcover2.png";
-import vcover3 from "../assets/video/vcover3.png";
+import Social from "./Social";
+// import clip from "../assets/video/clip.mp4";
+// import vcover1 from "../assets/video/vcover1.png";
+// import vcover2 from "../assets/video/vcover2.png";
+// import vcover3 from "../assets/video/vcover3.png";
 import { heroapi } from "../data/data";
 const Hero = () => {
   return (
@@ -20,12 +20,18 @@ const Hero = () => {
           {heroapi.btntext}
         </button>
       </div>
+
       <div align="center" className="hero-img ">
         <img
           className="w-[auto]  cursor-pointer -rotate-[20deg] duration-[700ms] hover:rotate-0 transition  hover:scale-110 ease-in-out  h-[150px] sm:h[190px] md:h-[230px] lg:h-[260px] "
           src={heroimg}
           alt="hero/img"
         />
+      </div>
+      <div className="grid items-center absolute top-[33vh] lg:top-[27vh] left-4 gap-3">
+        {heroapi.sociallinks?.map((val, i) => (
+          <Social key={i} icon={val.icon} />
+        ))}
       </div>
     </main>
   );
