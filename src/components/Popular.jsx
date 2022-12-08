@@ -8,7 +8,10 @@ const Popular = ({ array }) => {
       >
         {array.title}
       </div>
-      <div className="wrapper grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+      <div
+        align="center"
+        className="wrapper grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4"
+      >
         {array?.items?.map((arr, isp) => {
           return (
             <div
